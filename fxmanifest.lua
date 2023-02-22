@@ -5,7 +5,7 @@ author "Trsak"
 
 description "ESX Inventory HUD"
 
-version "2.4.0"
+version "2.4.1"
 
 ui_page "html/ui.html"
 
@@ -29,6 +29,8 @@ server_scripts {
   "config.lua"
 }
 
+shared_script '@es_extended/imports.lua'
+
 files {
   "html/ui.html",
   "html/css/ui.css",
@@ -40,5 +42,6 @@ files {
   -- IMAGES
   "html/img/bullet.png",
   -- ICONS
-  "html/img/items/*.png"
+  "html/img/items/*.png",
+  "html/img/items/*.jpg"
 }
