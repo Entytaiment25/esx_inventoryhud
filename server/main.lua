@@ -1,11 +1,6 @@
-ESX = nil
 
-TriggerEvent(
-	"esx:getSharedObject",
-	function(obj)
-		ESX = obj
-	end
-)
+ESX = exports["es_extended"]:getSharedObject()
+
 
 ESX.RegisterServerCallback(
 	"esx_inventoryhud:getPlayerInventory",
@@ -104,7 +99,7 @@ AddEventHandler(
 						"pNotify:SendNotification",
 						_source,
 						{
-							text = _U("not_enough_space"),
+							text = _U("nicht genug Platz"),
 							type = "error",
 							timeout = 3000
 						}
